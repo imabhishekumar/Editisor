@@ -6,10 +6,10 @@
 }
 
 body{
-	background-color: #d8e38d;
+	background-color: #ffffff;
 }
 
-.container{
+/* .container{
 	background-color: #fff;
 	width: 90vmin;
 	padding: 30px 30px;
@@ -19,6 +19,42 @@ body{
 	top: 50%;
 	border-radius: 10px;
 	box-shadow: 0 25px 50px rgba(7,20, 35,0.2);
+	display: flex;
+} */
+
+.container{
+	display: flex;
+	flex-direction: row;
+	background-color: transparent;
+	padding: 30px 30px;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	left: 50%;
+	top: 50%;
+	width: 200vmin;
+	justify-content: space-between;
+}
+
+.flex-item1{
+	width: 400px;
+	padding: 30px;
+	background-color: #020929;
+	border-radius: 10px;
+}
+
+.flex-item2{
+	flex:auto;
+	padding: 10px;
+	background-color: #faf1f1;
+	border-radius: 10px;
+	margin-left: 50px;
+	border: 1px solid #000;
+}
+
+.flex-item2:hover{
+	box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.66);
+	-webkit-box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.66);
+	-moz-box-shadow: 2px 2px 15px 4px rgba(0,0,0,0.66);
 }
 
 .options{
@@ -81,16 +117,48 @@ input[type="color"]::-moz-color-swatch {
 	box-shadow: 0 0 0 2px #fff;
 }
 
+label{
+	color:#fff;
+}
+
 #text-input {
-	margin-top: 10px;
 	border: 1px solid #ddd;
 	padding: 20px;
 	height: 50vh;
-	overflow: hidden;
+	overflow-x:hidden;
+	background-color: #fff;
 }
 
-.active{
+/* *::-webkit-scrollbar {
+	width: 10px;
 	background-color: #000;
+}
+
+*::-webkit-scrollbar-thumb{
+	background-color: skyblue;
+	border-radius: 20px;
+} */
+
+*::-webkit-scrollbar {
+	width: 10px; 
+ }
+
+*::-webkit-scrollbar-track {
+  background-color: rgb(239, 245, 243);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #024448;
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #020929;
+  }
+
+
+.active{
+	background-color: #1A120B;
 	color: #fff;
 }
 
@@ -107,7 +175,7 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .output button{
-	background-color: #880ED4;	
+	background-color: #110319;	
 }
 
 .save button{
@@ -116,72 +184,9 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .output button:active{
-	transform: translate(-2px, -2px);
+	transform: translate(2px, 2px);
 }
 
-.output button:before{
-	content: "copied";
-	position: absolute;
-	bottom: 95px;
-	left: 20px;
-	background-color: #880ED4;
-	padding: 8px 12px;
-	border-radius: 20px;
-	font-size: 15px;
-	display: none;
+.flex-item2 button:hover{
+	box-shadow: 2px 2px 5px #000;
 }
-
-.output button:after{
-	content: "";
-	position: absolute;
-	bottom: 90px;
-	left: 48px;
-	width: 10px;
-	height: 10px;
-	background-color: #880ED4;
-	transform: rotate(45deg);
-	display: none;
-}
-
-
-.output.show button:before,
-.output.show button:after{
-	display: block;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

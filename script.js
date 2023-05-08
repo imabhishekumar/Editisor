@@ -145,27 +145,3 @@ const highlighterRemover = (className) => {
 window.onload = initializer();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

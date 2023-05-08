@@ -27,13 +27,11 @@
 	
 
 	<!-- font awesome icons -->
-	<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
 </head>
 <body>
 	<div class="container ">
-		<div class="options ">
+		<div class="options flex-item1">
 			<!-- Text Format -->
 			<button id="bold" class="option-button format">
 				<i class="fa-solid fa-bold"></i>
@@ -140,22 +138,24 @@
 			</div>
 		</div>
 
-		<div id="text-input" contenteditable="true" spellcheck="false"></div>
+		<div class="input flex-item2">
+			<div id="text-input" contenteditable="true" spellcheck="false"></div>
 		
-		<div class="d-flex justify-content-between">
-			<div class="output">
-				<button id="copy">
-					<i class="fa fa-clone"></i>
-				</button>
-			</div>
+			<div class="d-flex justify-content-between">
+				<div class="output">
+					<button id="copy">
+						<i class="fa fa-clone"></i>
+					</button>
+				</div>
 
-			<div class="save d-flex">
-				<button id="savePdf">
-					<i class="fa fa-file-pdf"></i>
-				</button>
-				<button id="saveTxt">
-					<i class="fa fa-save"></i>
-				</button>	
+				<div class="save d-flex">
+					<button id="savePdf">
+						<i class="fa fa-file-pdf"></i>
+					</button>
+					<button id="saveTxt">
+						<i class="fa fa-save"></i>
+					</button>	
+				</div>
 			</div>
 		</div>
 
@@ -165,28 +165,4 @@
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
