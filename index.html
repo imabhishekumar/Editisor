@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon icon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+	<title>Editisor : An editor for your text</title>
+	
+	<!-- bootstrap 5 -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+	<!-- local CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+
+	<!-- font awesome icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+</head>
+<body>
+	<div class="container ">
+		<div class="options flex-item1">
+			<!-- Text Format -->
+			<button id="bold" class="option-button format">
+				<i class="fa-solid fa-bold"></i>
+			</button>
+			<button id="italic" class="option-button format">
+				<i class="fa-solid fa-italic"></i>
+			</button>
+			<button id="underline" class="option-button format">
+				<i class="fa-solid fa-underline"></i>
+			</button>
+			<button id="strikethrough" class="option-button format">
+				<i class="fa-solid fa-strikethrough"></i>
+			</button>
+			<button id="superscript" class="option-button script">
+				<i class="fa-solid fa-superscript"></i>
+			</button>
+			<button id="subscript" class="option-button script">
+				<i class="fa-solid fa-subscript"></i>
+			</button>
+
+			<!-- List  -->
+
+			<button id="insertOrderedList" class="option-button list">
+				<div class="fa-solid fa-list-ol"></div>
+			</button>
+			<button id="insertUnOrderedList" class="option-button list">
+				<div class="fa-solid fa-list-ul"></div>
+			</button>
+
+
+			<!-- Undo redo -->
+
+			<button id="undo" class="option-button">
+				<i class="fa-solid fa-undo"></i>
+			</button>
+
+			<button id="redo" class="option-button">
+				<i class="fa-solid fa-redo"></i>
+			</button>
+
+			<!-- Link -->
+
+			<button id="createLink" class="adv-option-button">
+				<div class="fa-solid fa-link"></div>
+			</button>
+
+			<button id="unlink" class="option-button">
+				<div class="fa-solid fa-unlink"></div>
+			</button>
+
+			<!-- Alignment -->
+
+			<button id="justifyLeft" class="option-button align">
+				<div class="fa-solid fa-align-left"></div>
+			</button>
+
+			<button id="justifyCenter" class="option-button align">
+				<div class="fa-solid fa-align-center"></div>
+			</button>
+
+			<button id="justifyRight" class="option-button align">
+				<div class="fa-solid fa-align-right"></div>
+			</button>
+
+			<button id="justifyFull" class="option-button align">
+				<div class="fa-solid fa-align-justify"></div>
+			</button>
+
+			<button id="indent" class="option-button  spacing">
+				<div class="fa-solid fa-indent"></div>
+			</button>
+
+			<button id="outdent" class="option-button  spacing">
+				<div class="fa-solid fa-outdent"></div>
+			</button>
+
+			<!-- Headings -->
+
+			<select id="formatBlock" class="adv-option-button">
+				<option value="H1">H1</option>
+				<option value="H2">H2</option>
+				<option value="H3">H3</option>
+				<option value="H4">H4</option>
+				<option value="H5">H5</option>
+				<option value="H6">H6</option>
+			</select>
+
+			<!-- Font -->
+
+			<select id="fontName" class="adv-option-button"></select>
+
+			<select id="fontSize" class="adv-option-button"></select>
+
+			<!-- Color -->
+
+			<div class="input-wrapper">
+				<input type="Color" id="foreColor" class="adv-option-button"/>
+				<label for="foreColor">Font Color</label>
+			</div>
+
+			<div class="input-wrapper">
+				<input type="color" id="backColor" class="adv-option-button">
+				<label for="backColor">Highlight Color</label>
+			</div>
+		</div>
+
+		<div class="input flex-item2">
+			<div id="text-input" contenteditable="true" spellcheck="false"></div>
+		
+			<div class="d-flex justify-content-between">
+				<div class="output">
+					<button id="copy">
+						<i class="fa fa-clone"></i>
+					</button>
+				</div>
+
+				<div class="save d-flex">
+					<button id="savePdf">
+						<i class="fa fa-file-pdf"></i>
+					</button>
+					<button id="saveTxt">
+						<i class="fa fa-save"></i>
+					</button>	
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
